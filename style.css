@@ -659,7 +659,7 @@ section {
 }
 
 .works__img__box:hover::after {
-    opacity: 0.9;
+    opacity: 0.5;
 }
 
 
