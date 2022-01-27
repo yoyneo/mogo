@@ -76,11 +76,11 @@ section {
 .intro {
     background: url(assest/intro_bg.jpg) center;
     background-attachment: cover;
-    height: 100vh;
+    height: 98vh;
 }
 
 .intro__content {
-    height: 100vh;
+    height: 98vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -416,7 +416,7 @@ section {
 
 .design {
     height: 850px;
-    background: url(/assest/design/Layer\ 45.jpg) no-repeat;
+    background: url(assest/design/Layer\ 45.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -681,7 +681,7 @@ section {
 
 .people__say {
     height: 830px;
-    background: url(/assest/people_say/people_bg.jpg) center;
+    background: url(assest/people_say/people_bg.jpg) center;
     background-attachment: cover;
 }
 
@@ -692,15 +692,18 @@ section {
 
 .people__content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 520px);
+    row-gap: 70px;
+    column-gap: 90px;
+    margin-top: 160px;
 }
 
 .people__item {
     display: flex;
-    margin-left: 40px;
-    margin-right: 50px;
-    margin-bottom: 70px;
-    margin-top: 30px;
+}
+
+.people__img {
+    height: 112px;
 }
 
 .people__text {
@@ -710,9 +713,94 @@ section {
 .people__name {
     text-transform: uppercase;
     font: 400 14px Montserrat;
-    color: #333;
+    color: rgb(71, 40, 40);
+    margin-bottom: 10px;
 }
 
 .people__post {
     font: 300 italic 16/24 Roboto;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.people__post::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    position: absolute;
+    left: 0;
+    top: 38px;
+}
+
+.people__quote {
+    font: 400 15px/24px Roboto;
+    color: #999;
+}
+
+
+/* OUR STORIES */
+
+.stories__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 110px;
+}
+
+.stories__picture {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.stories__date {
+    display: flex;
+    position: absolute;
+    background-color: #95e1d3;
+    color: white;
+    width: 60px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: -10px;
+    top: 160px;
+}
+
+.stories__day {
+    font: 700 30px Montserrat;
+}
+
+.stories__month {
+    font-style: italic;
+}
+
+.stories__subtitle {
+    font: 400 14px Montserrat;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.stories__text {
+    margin-bottom: 15px;
+}
+
+.stories__counter {
+    display: flex;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 15px;
+}
+
+.stories__counter__block {
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.stories__icon {
+    height: min-content;
+    margin-right: 5px;
 }
