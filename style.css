@@ -13,7 +13,6 @@ p {
 }
 
 section {
-    width: 100%;
     min-width: 1200px;
 }
 
@@ -76,7 +75,7 @@ section {
 .intro {
     background: url(assest/intro_bg.jpg) center;
     background-attachment: cover;
-    height: 98vh;
+    height: 100vh;
 }
 
 .intro__content {
@@ -632,12 +631,17 @@ section {
 
 .some__works {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(2, 1fr);
+    width: 100%;
 }
 
 .works--big--img {
     grid-row: span 2;
+}
+
+.works__img__box .aboutus__img {
+    max-width: 100%;
 }
 
 .works__img__box {
@@ -659,7 +663,7 @@ section {
 }
 
 .works__img__box:hover::after {
-    opacity: 0.5;
+    opacity: 0.9;
 }
 
 
@@ -803,4 +807,13 @@ section {
 .stories__icon {
     height: min-content;
     margin-right: 5px;
+}
+
+
+/* OPEN MAP */
+
+.openmap {
+    background: url(assest/Openmap/map.jpg);
+    height: 200px;
+    display: block;
 }
