@@ -816,4 +816,35 @@ section {
     background: url(assest/Openmap/map.jpg);
     height: 200px;
     display: block;
+    position: relative;
+}
+
+.openmap__text {
+    position: absolute;
+    transform: translateX(-50%)translateY(-50%);
+    left: 50%;
+    top: 50%;
+    font: 700 24px 'Montserrat';
+    text-transform: uppercase;
+    color: #f38181;
+}
+
+.openmap__text::before {
+    content: url(assest/Openmap/PIN.png);
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: -38px;
+}
+
+.openmap__text::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -20px;
 }
