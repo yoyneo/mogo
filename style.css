@@ -851,3 +851,132 @@ section {
 
 
 /* FOOTER */
+
+.footer {
+    background-color: #f8f8f8;
+}
+
+.footer__content {
+    padding-top: 75px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__item_mogo {
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__header_mogo {
+    font: 700 46px 'Montserrat';
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__text {
+    font: 400 15px/24px 'Roboto';
+    color: #999;
+}
+
+.footer__followers {
+    font: 400 16px 'Roboto';
+    color: #333;
+    border-bottom: 1px solid #999;
+}
+
+.footer__number__followers {
+    font: 700 20px 'Roboto';
+}
+
+.footer__follow__us {
+    display: flex;
+}
+
+.footer__follow__icons {
+    display: flex;
+}
+
+.footer__follow__icons a {
+    margin-right: 16px;
+    display: block;
+}
+
+.footer__follow__text {
+    font: 300 italic 15px/24px 'Roboto';
+    color: #999;
+    margin-right: 20px;
+}
+
+.footer__subscribe__form {
+    display: inline-flex;
+    box-shadow: none;
+}
+
+.subscribe__form__input {
+    width: 230px;
+    height: 40px;
+    border-radius: 0;
+    border: 1px solid #a6a6a6
+}
+
+.subscribe__form__input::placeholder {
+    font: 300 italic 15px/24px 'Roboto';
+    color: #ccc;
+}
+
+.subscribe__form__button {
+    width: 150px;
+    height: 40px;
+    background-color: #95e1d3;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font: 700 12px 'Roboto';
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    border: 1px solid #a6a6a6;
+    border-left: none;
+}
+
+.footer__item_blogs {}
+
+.footer__item_instagram {}
+
+.aaa {
+    color: #95e1d3;
+}
+
+
+/* footer blogs */
+
+.footer__item {}
+
+.footer__item_blogs {}
+
+.footer__header {
+    font: 400 14px 'Montserrat';
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.footer__blogs__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__blogs__item {
+    display: flex;
+}
+
+.footer__blogs__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer__blogs__description {}
+
+.footer__blogs__date {}
