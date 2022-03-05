@@ -12,8 +12,9 @@ p {
     font-family: 'Montserrat', sans-serif;
 }
 
-section {
-    min-width: 1200px;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .container {
@@ -73,13 +74,19 @@ section {
 /* INTRO */
 
 .intro {
-    background: url(assest/intro_bg.jpg) center;
-    background-attachment: cover;
+    background: url(assest/intro_bg.jpg) center no-repeat;
+    background-attachment: fixed;
     height: 100vh;
+    max-height: 1080px;
+    background-size: cover;
+}
+
+.intro_container {
+    height: 100%;
 }
 
 .intro__content {
-    height: 98vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -100,6 +107,7 @@ section {
     font-weight: 700;
     font-size: 30px;
     margin-top: 25px;
+    flex: 0 0 auto;
 }
 
 
@@ -110,6 +118,7 @@ section {
     display: flex;
     justify-content: space-between;
     margin-top: 35px;
+    flex: 0 0 auto;
 }
 
 .navbutton {
@@ -120,6 +129,7 @@ section {
     text-transform: uppercase;
     text-decoration: none;
     transition: color 0.3s ease;
+    flex: 0 0 auto;
 }
 
 .navicon img {
@@ -152,6 +162,7 @@ section {
 .title {
     text-align: center;
     width: 800px;
+    flex: 0 0 auto;
 }
 
 .title__uptitle {
@@ -207,6 +218,7 @@ section {
     justify-content: space-between;
     width: 100%;
     color: white;
+    flex: 0 0 auto;
 }
 
 .index__item {
@@ -854,18 +866,22 @@ section {
 
 .footer {
     background-color: #f8f8f8;
+    padding-top: 75px;
 }
 
 .footer__content {
-    padding-top: 75px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
+    height: 360px;
 }
 
 .footer__item_mogo {
-    width: 480px;
+    width: 472px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .footer__header_mogo {
@@ -883,7 +899,8 @@ section {
 .footer__followers {
     font: 400 16px 'Roboto';
     color: #333;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    height: 33px;
 }
 
 .footer__number__followers {
@@ -901,6 +918,14 @@ section {
 .footer__follow__icons a {
     margin-right: 16px;
     display: block;
+}
+
+.follow__svg:hover {
+    fill: #72d487;
+}
+
+.follow__svg {
+    transition: fill 0.2s ease;
 }
 
 .footer__follow__text {
@@ -938,14 +963,12 @@ section {
     letter-spacing: 0.1rem;
     border: 1px solid #a6a6a6;
     border-left: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
-.footer__item_blogs {}
-
-.footer__item_instagram {}
-
-.aaa {
-    color: #95e1d3;
+.subscribe__form__button:hover {
+    background-color: #72d487;
 }
 
 
@@ -953,22 +976,29 @@ section {
 
 .footer__item {}
 
-.footer__item_blogs {}
+.footer__item_blogs {
+    width: 340px;
+}
 
 .footer__header {
     font: 400 14px 'Montserrat';
     text-transform: uppercase;
     color: #333;
-    margin-bottom: 40px;
 }
 
 .footer__blogs__content {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
 }
 
 .footer__blogs__item {
     display: flex;
+}
+
+.footer__blogs__item img {
+    margin-right: 20px;
 }
 
 .footer__blogs__text {
@@ -977,6 +1007,78 @@ section {
     justify-content: space-around;
 }
 
-.footer__blogs__description {}
+.footer__blogs__description {
+    font-size: 12px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #333;
+}
 
-.footer__blogs__date {}
+.footer__blogs__date {
+    font: 300 italic 13px/24px "Roboto";
+    color: #999;
+}
+
+
+/* instagram */
+
+.footer__item {}
+
+.footer__item_instagram,
+.footer__item_blogs {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__header {}
+
+.instagram__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+}
+
+.instagram__album {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2px;
+}
+
+.instagram__photo {}
+
+.instagram__more-photos {
+    font: italic 300 13px/13px Roboto;
+    color: #333;
+    text-decoration: none;
+    transition: text-shadow 0.2s ease;
+}
+
+.instagram__more-photos:hover {
+    text-shadow: 1px 1px 1px rgb(167, 167, 167);
+}
+
+.footer__copyright {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 70px;
+}
+
+.copyright__text {
+    font-size: 14px;
+    color: #333;
+}
+
+.copyright__link {
+    color: #f38181;
+}
+
+.copyright__link:hover {
+    text-decoration: underline;
+}
